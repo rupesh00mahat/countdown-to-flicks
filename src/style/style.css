@@ -8,6 +8,9 @@
     margin: 0 auto;
 
 }
+.movie-container{
+    position: relative;
+}
 img{
     width: 100%;
 }
@@ -25,4 +28,14 @@ img{
 .movies-list > div:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
+}
+.days-until-wrapper{
+background-color: #333;
+padding: 10px 0 ;
+position: absolute;
+width: 100%;
+top: 0;
+right: 0;
+color: white;
+text-align: center;
 }
