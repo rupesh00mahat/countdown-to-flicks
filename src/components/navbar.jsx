@@ -3,9 +3,9 @@ import React from "react";
 function Navbar() {
   return (
     <div id="navbar">
-      <div className="wrapper">
-        
-      </div>
+       <h3> Countdown-to-flicks</h3>
+       <input type="text" name="search-result" id="ssearch-result"/>
+       <button>Search</button>
     </div>
   );
 }
