@@ -1,87 +1,108 @@
-*{
-
-    margin: 0;
-    padding: 0s;
+* {
+  margin: 0;
+  padding: 0s;
 }
-.movies-list{
-
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-
+html, body{
+    background-color: #202020;
 }
-.movie-container{
-    position: relative;
+.movies-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
-img{
-    width: 100%;
+.movie-container {
+  width: 300px;
+
+  position: relative;
+  background-color: #202020;
+  color: #fff;
+  border: 3px solid #9b520d;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 20px;
 }
-.movies-list > div{
-
-    width: 300px;
-    justify-content: center;
-
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+img {
+  width: 100%;
+  box-shadow: 0 0 10px 3px #e97101 !important;
+  border-radius: 20px;
 }
-.movies-list > div:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
+.movies-list > div:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+  background-color: #333;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+#navbar input {
+  height: 50px;
+  max-width: 100%;
+  width: 500px;
+  font-size: 25px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+#navbar button {
+  height: 100%;
+  max-width: 150px;
+  width: 100%;
+  padding: 18px 36px;
+  margin: 0 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#navbar button:hover {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #fff;
+}
+.container-content {
+    text-align: center;
+    padding-top: 20px;
+}
+.container-content h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.container-content p{
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.container-content > .countdown-wrapper{
+    font-size: 20px;
+    color: #9b520d;
 }
 .days-until-wrapper{
-background-color: #333;
-padding: 10px 0 ;
-position: absolute;
-width: 100%;
-top: 0;
-right: 0;
-color: white;
-text-align: center;
-}
-#navbar{
-background-color: #333;
-color: #fff;
-font-size: 40px;
-font-weight: 500;
-text-align: center;
-margin-bottom: 20px;;
-padding: 20px 40px;
-display: flex;
-align-content: center;
-justify-content: space-between;
-}
-#navbar input{
-    height: 50px;
-    max-width: 100%;
-    width: 500px;
-    font-size: 25px;
-    outline: none;
-    border: none;
-    border-radius: 30px;
-    padding: 0 20px;
-}
-#navbar button{
-height: 100%;
-max-width: 150px;
-width: 100%;
-padding: 18px 36px ;
-margin: 0 10px;
-background-color: #fff;
-color: #333;
-font-size: 15px;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-transition: all 0.3s ease-in-out;
-}
-#navbar button:hover{
-    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: -20px;
     background-color: #333;
-    border: 1px solid #fff;
+    opacity: 0.9;
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    z-index: 100;
 }
