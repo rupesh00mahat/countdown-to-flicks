@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useDaysUntil from "../hooks/useDaysUntil";
 
 function MovieContainer({ title, releaseDate, poster, description }) {
-  const [daysLeft, setDaysLeft] = useState(0);
+  const daysLeft = useDaysUntil(releaseDate);
 
-  useEffect(() => {
-    setDaysLeft(
-      Math.ceil(
-        (new Date(releaseDate.toString()) - new Date()) / (1000 * 60 * 60 * 24)
-      )
-    );
-  }, [releaseDate]);
+  
   return (
     <div className="movie-container">
       <div className="days-until-wrapper">{daysLeft} Days to go</div>
