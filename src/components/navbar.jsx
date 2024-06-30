@@ -4,8 +4,11 @@ function Navbar() {
   return (
     <div id="navbar">
        <h3> Countdown-to-flicks</h3>
-       <input type="text" name="search-result" id="ssearch-result"/>
-       <button>Search</button>
+      <ul className="navbar-items">
+      <li><a href="#">Upcoming</a></li>
+      <li><a href="#">Now Showing</a></li>
+      <li><a href="#">What to watch</a></li>
+      </ul>
     </div>
   );
 }
