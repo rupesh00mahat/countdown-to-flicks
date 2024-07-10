@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-function useFetch() {
+function useFetch(url) {
     const [movies, setMovies] = useState([]);
     useEffect(() => {
         const options = {
@@ -13,12 +13,11 @@ function useFetch() {
         };
     
         fetch(
-          "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+          url,
           options
         )
           .then((response) => response.json())
           .then((response) => {
-            console.log(response);
             setMovies(response.results);
           })
           .catch((err) => console.error(err));

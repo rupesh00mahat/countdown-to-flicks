@@ -5,9 +5,9 @@ function Navbar() {
     <div id="navbar">
        <h3> Countdown-to-flicks</h3>
       <ul className="navbar-items">
-      <li><a href="#">Upcoming</a></li>
-      <li><a href="#">Now Showing</a></li>
-      <li><a href="#">What to watch</a></li>
+      <li><Link to="/upcoming">Upcoming</Link></li>
+      <li><Link to="#">Now Showing</Link></li>
+      <li><Link to="/">What to watch</Link></li>
       </ul>
     </div>
   );

@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../components/navbar'
-import MovieContainer from '../components/movie-container'
-import ContainerWrapper from '../components/container-wrapper'
+import PopularMoviesWrapper from '../components/popular-movies'
+import { Outlet } from 'react-router-dom'
 
 function Home() {
   return (
     <>
     <Navbar/>
-    <ContainerWrapper/>
+    <Outlet/>
     </>
   )
 }
