@@ -21,7 +21,7 @@ function useFetch(url) {
             setMovies(response.results);
           })
           .catch((err) => console.error(err));
-      }, []);
+      }, [url]);
       return movies;
 }
 

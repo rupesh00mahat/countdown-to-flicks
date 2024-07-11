@@ -1,6 +1,4 @@
-import ContainerWrapper from './components/popular-movies'
 import './style/style.css';
-import Navbar from './components/navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './routes/home';
 import MovieContextProvider from './context/movie-context';

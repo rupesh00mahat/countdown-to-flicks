@@ -28,7 +28,7 @@ function MovieContextProvider({children}) {
       dispatch({type:ACTIONTYPE.ADDMOVIES, payload: movies
       })
      }
-    },[state])
+    },[movies])
 
   return (
     <MovieContext.Provider value={{state, dispatch}}>
