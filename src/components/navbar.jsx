@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div id="navbar">
-       <h3> Countdown-to-flicks</h3>
-      <ul className="navbar-items">
-      <li><Link to="/upcoming">Upcoming</Link></li>
+    <nav id="navbar">
+      <div className="container flex align-center justify-between">
+      <h1 className="title light-text"> <Link className="title" to={'/'}>Countdown-to-flicks</Link></h1>
+      <ul className="navbar-items flex justify-between align-center">
+      <li className="light-text"><Link to="/upcoming">Upcoming</Link></li>
       <li><Link to="#">Now Showing</Link></li>
       <li><Link to="/">What to watch</Link></li>
       </ul>
-    </div>
+      </div>
+    </nav>
   );
 }
 

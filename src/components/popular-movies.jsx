@@ -15,7 +15,8 @@ function PopularMoviesWrapper() {
   console.log(url);
 
   return (
-    <div className="movies-list">
+    <main className="movies-list">
+      <div className="container flex justify-between wrap">
       {movieList.map(({id, title,release_date, poster_path, overview}) => {
           return (
             <MovieContainer
@@ -27,7 +28,8 @@ function PopularMoviesWrapper() {
             />
           );
       })}
-    </div>
+      </div>
+    </main>
   );
 }
 

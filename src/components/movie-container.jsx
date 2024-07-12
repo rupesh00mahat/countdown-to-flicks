@@ -7,7 +7,6 @@ function MovieContainer({ title, releaseDate, poster, description }) {
   
   return (
     <div className="movie-container">
-      <div className="days-until-wrapper">{daysLeft} Days to go</div>
       <img src={`http://image.tmdb.org/t/p/w500${poster}`} />
       <div className="container-content">
         <h3>{title}</h3>

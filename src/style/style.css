@@ -1,42 +1,80 @@
 * {
   margin: 0;
-  padding: 0s;
+  padding: 0;
 }
-html, body{
-    background-color: #202020;
+:root{
+  --ctf-primary-bg-color: #202020;
+  --ctf-secondary-bg-color: #333;
+  --ctf-primary-text-color: #fff;
+  --ctf-font-size-normal: 1.6rem;
+  --ctf-font-size-small: 1rem;
+  --ctf-font-size-medium: 2rem;
+  --ctf-font-size-big: 3rem;
+  --ctf-font-size-large: 4rem;
+
+
 }
-.movies-list {
+html{
+    background-color: var(--ctf-primary-bg-color);
+    font-size: 62.5%;
+}
+body{
+  text-align: center;
+}
+.flex{
   display: flex;
-  gap: 10px;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  color: var(--ctf-primary-text-color);
+  text-decoration: none;
+  font-size: var(--ctf-font-size-medium);
+}
+.wrap{
   flex-wrap: wrap;
-  justify-content: flex-start;
+}
+.light-text{
+  color: var(--ctf-primary-text-color);
+}
+.title{
+  font-size: var(--ctf-font-size-large);
+  font-weight: 800;
+}
+.semi-title{
+  font-size: var(--ctf-font-size-big);
+  font-weight: 600;
+}
+.container{
   width: 90%;
   margin: 0 auto;
 }
+.movies-list .container{
+  gap: 10px;
+
+}
 .navbar-items{
-display: flex;
-list-style-type: none;
-justify-content: space-between;
-  font-size: 20px;
-  align-items: center;
-  /* background-color: red; */
+  font-size: 2rem;
   width: 50%;
 }
 .movie-container {
-  width: 300px;
-
+  width: 350px;
   position: relative;
-  background-color: #202020;
-  color: #fff;
-  border: 3px solid #9b520d;
-  border-radius: 30px;
-  justify-content: center;
-  /* padding: 20px; */
+  border-radius: 20px;
 }
 img {
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 10px 3px #e97101 !important;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -46,16 +84,10 @@ img {
 }
 
 #navbar {
-  background-color: #333;
-  color: #fff;
-  font-size: 40px;
+  font-size: var(--ctf-font-size-big);
   font-weight: 500;
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 20px 40px;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 2rem 4rem;
 }
 #navbar input {
   height: 50px;
@@ -102,18 +134,4 @@ img {
 .container-content > .countdown-wrapper{
     font-size: 20px;
     color: #9b520d;
-}
-.days-until-wrapper{
-    position: absolute;
-    top: 0px;
-    right: -20px;
-    background-color: #333;
-    opacity: 0.9;
-    width: 100%;
-    padding: 10px 0;
-    margin: 20px;
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-    z-index: 100;
 }
