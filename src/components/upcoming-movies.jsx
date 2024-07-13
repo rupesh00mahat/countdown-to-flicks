@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import MovieContainer from "./movie-container";
 import useFetch from '../hooks/useFetch';
 import { ACTIONTYPE, MovieContext } from "../context/movie-context";
+import UpcomingMovieCard from "./upcoming-movie-card";
 
 function UpcomingMovies() {
 
@@ -19,13 +20,22 @@ function UpcomingMovies() {
       {movieList.map(({id, title,release_date, poster_path, overview}) => {
         if(new Date(release_date.toString()) > new Date()){
           return (
-            <MovieContainer
+           <>
+            {/* <MovieContainer
               key={id}
               title={title}
               releaseDate={release_date}
               poster={poster_path}
               description={overview}
-            />
+            /> */}
+            <UpcomingMovieCard
+             key={id}
+             title={title}
+             releaseDate={release_date}
+             poster={poster_path}
+             description={overview}
+            /></>
+
           );
         }
       })}
