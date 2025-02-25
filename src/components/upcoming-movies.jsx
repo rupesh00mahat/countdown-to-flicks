@@ -13,12 +13,12 @@ function UpcomingMovies() {
     dispatch({type: ACTIONTYPE.CHANGEURL, payload: "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"});
   },[])
 
-  console.log(state);
+  console.log('state',movieList);
 
   return (
-    <div className="movies-list">
-      {movieList.map(({id, title,release_date, poster_path, overview}) => {
-        if(new Date(release_date.toString()) > new Date()){
+    <div className="movies-list flex wrap">
+      {movieList && movieList.map(({id, title,release_date, poster_path, overview, vote_average}) => {
+        console.log('movie', movie);
           return (
            <>
             {/* <MovieContainer
@@ -34,10 +34,12 @@ function UpcomingMovies() {
              releaseDate={release_date}
              poster={poster_path}
              description={overview}
-            /></>
+             rating={parseInt(vote_average)*10}
+            />
+            </>
 
           );
-        }
+        
       })}
     </div>
   );

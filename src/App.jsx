@@ -4,6 +4,7 @@ import Home from './routes/home';
 import MovieContextProvider from './context/movie-context';
 import PopularMoviesWrapper from './components/popular-movies';
 import UpcomingMovies from './components/upcoming-movies';
+import HomePage from './pages/HomePage';
 
 
 const router = createBrowserRouter([
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <PopularMoviesWrapper/>
+        element: <HomePage/>
       },
       {
         path: '/upcoming',
